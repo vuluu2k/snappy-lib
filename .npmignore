@@ -1,5 +1,6 @@
 src
 .babelrc
+.storybook
 rollup.config.js
 ## node modules folder
 node_modules
@@ -16,5 +17,4 @@ npm-debug.log
 .npmrc
 
 config.gypi
-package-lock.json
-Footer
+yarn.lock
