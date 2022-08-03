@@ -12,3 +12,4 @@ export default {
 };
 
 export { default as SnyTabs } from './examples/SnyTabs/SnyTabs';
+export { default as Props } from './examples/SnyTabs/Props';

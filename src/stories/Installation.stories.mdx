@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Home/Installation" />
+
+![Reactstrap](logo.svg)
+
+### Snappy Lib is a [React](https://reactjs.org) component library for [Snappy Express](https://snappy.vn)
+
+## Getting Started
+
+### Install SnappyLib:
+
+```sh
+npm install snappy-lib react react-dom
+```
+
+snappy-lib currently requires React 16.8 or higher.
+
+### Include Css
+
+Either:
+
+1. Import css in your application code:
+
+```javascript
+import 'snappy-lib/dist/snappy.css';
+```
+
+2. or include Bootstrap from a CDN URL in your HTML layout:
+
+```html
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+  />
+</head>
+```
+
+### Import components:
+
+```jsx
+import React from 'react';
+import { SnyButton } from 'snappy-lib';
+
+export default (props) => {
+  return <SnyButton type="danger">Danger!</SnyButton>;
+};
+```
