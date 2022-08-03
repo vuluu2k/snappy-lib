@@ -4,7 +4,7 @@ node_modules
 /build
 /lib
 /es
-/docs
+docs
 .DS_Store
 .idea
 .history
