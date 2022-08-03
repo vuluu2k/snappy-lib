@@ -4,9 +4,10 @@ node_modules
 /build
 /lib
 /es
+/docs
 .DS_Store
 .idea
 .history
 npm-debug.log
-package-lock.json
 /storybook-static
+yarn.lock

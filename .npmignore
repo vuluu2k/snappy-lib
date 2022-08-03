@@ -2,6 +2,7 @@ src
 .babelrc
 .storybook
 build
+docs
 ## node modules folder
 node_modules
 ## incase you have a git repositiory initiated
