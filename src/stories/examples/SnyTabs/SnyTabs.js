@@ -9,7 +9,7 @@ function Example(args) {
       <SnyTabs
         {...args}
         value={value}
-        onchange={(event) => setValue(event.value)}
+        onClick={(value, _) => setValue(value)}
       />
     </div>
   );
@@ -23,15 +23,6 @@ Example.args = {
     { value: 4, label: 'Hoàn thất bại' },
   ],
   value: 1,
-  status: undefined,
-  status_vi: 'SnappyExpress',
-  type: '',
-  label: undefined,
-  children: undefined,
-  tooltip: {},
-  badge: {},
-  style: {},
-  className: '',
 };
 
 export default Example;

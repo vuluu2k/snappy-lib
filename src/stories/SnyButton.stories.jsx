@@ -13,4 +13,5 @@ export default {
 
 export { default as SnyButton } from './examples/SnyButton/SnyButton';
 export { default as Variants } from './examples/SnyButton/Variants';
+export { default as Size } from './examples/SnyButton/Size';
 export { default as Props } from './examples/SnyButton/Props';

@@ -17,3 +17,5 @@ export const colors_status = [
   'red',
   'purple',
 ];
+
+export const size = ['sm', 'md', 'lg'];

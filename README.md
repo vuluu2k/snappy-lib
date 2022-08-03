@@ -11,11 +11,11 @@
 ## 📦 Install
 
 ```bash
-npm install snappy-express
+npm install snappy-lib
 ```
 
 ```bash
-yarn add snappy-express
+yarn add snappy-lib
 ```
 
 ## Attachment

@@ -2,23 +2,7 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import PropTypes from 'prop-types';
 
-const SnyTabs = ({ options, onClick, style, styleTab, className, value, arrayActive }) => {
-  return (
-    <Row className={`sny-tabs ${className}`} style={style}>
-      {options.map((item, idx) => (
-        <Col
-          key={idx}
-          onClick={() => onClick(item.value, item.label)}
-          className={`tab ${(item.value === value || arrayActive.includes(item.value)) && 'tab-active'}`}
-          style={styleTab}>
-          {item.label}
-        </Col>
-      ))}
-    </Row>
-  );
-};
-
-SnyTabs.propTypes = {
+const propTypes = {
   options: PropTypes.array,
   onClick: PropTypes.func,
   style: PropTypes.object,
@@ -28,7 +12,7 @@ SnyTabs.propTypes = {
   arrayActive: PropTypes.array,
 };
 
-SnyTabs.defaultProps = {
+const defaultProps = {
   options: [
     { value: 1, label: 'SnappyExpress1' },
     { value: 2, label: 'SnappyExpress2' },
@@ -42,5 +26,37 @@ SnyTabs.defaultProps = {
   value: 1,
   arrayActive: [],
 };
+
+const SnyTabs = ({
+  options,
+  onClick,
+  style,
+  styleTab,
+  className,
+  value,
+  arrayActive,
+}) => {
+  return (
+    <Row className={`sny-tabs ${className}`} style={style}>
+      {options.map((item, idx) => (
+        <Col
+          key={idx}
+          onClick={() => onClick(item.value, item.label)}
+          className={`tab ${
+            (item.value === value || arrayActive.includes(item.value)) &&
+            'tab-active'
+          }`}
+          style={styleTab}
+        >
+          {item.label}
+        </Col>
+      ))}
+    </Row>
+  );
+};
+
+SnyTabs.propTypes = propTypes;
+
+SnyTabs.defaultProps = defaultProps;
 
 export default SnyTabs;

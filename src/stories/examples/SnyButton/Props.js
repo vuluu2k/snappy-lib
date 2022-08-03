@@ -7,3 +7,13 @@ function Example() {
 }
 
 export default Example;
+
+
+Example.parameters = {
+  docs: {
+    description: {
+      story:
+        'There are props use Button',
+    },
+  },
+};
