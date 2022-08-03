@@ -1,6 +1,6 @@
 {
   "name": "snappy-lib",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "snappy library for snappy express with custom antd",
   "type": "commonjs",
   "source": "src/index.js",
@@ -16,7 +16,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "start-storybook -s ./static -p 8080",
-    "build-storybook": "build-storybook",
     "build:docs": "build-storybook -s ./static -o ./build",
     "build-lib": "microbundle --generateTypes false --jsx React.createElement --compress false"
   },
@@ -36,7 +35,7 @@
     "snappy"
   ],
   "author": "vuluu2k <vuluu040320@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/LuuCongQuangVu/snappy-lib/issues"
   },
