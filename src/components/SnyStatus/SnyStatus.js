@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Tooltip, Badge } from 'antd';
 
@@ -23,27 +23,23 @@ const trackingStatus = [
   { name: 'canceled', text: 'Đã hủy' },
 ];
 
-export default class SnyStatus extends Component {
-  render() {
-    const { status, statusArray, status_vi, type, label, children, tooltip, badge, style, className, base } = this.props;
+export const SnyStatus = ({ status, statusArray, status_vi, type, label, children, tooltip, badge, style, className, base }) => {
+  const checkStatus = statusArray.find(item => item.array.includes(status));
 
-    const checkStatus = statusArray.find(item => item.array.includes(status));
-
-    return (
-      <Tooltip {...tooltip}>
-        <Badge {...badge}>
-          <div
-            className={`sny-status ${base && 'base'} ${status && 'w-148'} ${base ? `base-${type}` : type} ${
-              checkStatus && (base ? `base-${checkStatus?.color}` : checkStatus?.color)
-            } ${className}`}
-            style={style}>
-            {label || children || status_vi || trackingStatus.find(item => item.name === status)?.text || 'SnappyExpress'}
-          </div>
-        </Badge>
-      </Tooltip>
-    );
-  }
-}
+  return (
+    <Tooltip {...tooltip}>
+      <Badge {...badge}>
+        <div
+          className={`sny-status ${base && 'base'} ${status && 'w-148'} ${base ? `base-${type}` : type} ${
+            checkStatus && (base ? `base-${checkStatus?.color}` : checkStatus?.color)
+          } ${className}`}
+          style={style}>
+          {label || children || status_vi || trackingStatus.find(item => item.name === status)?.text || 'SnappyExpress'}
+        </div>
+      </Badge>
+    </Tooltip>
+  );
+};
 
 SnyStatus.propTypes = {
   statusArray: PropTypes.array,
