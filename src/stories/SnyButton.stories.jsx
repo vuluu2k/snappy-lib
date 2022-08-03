@@ -4,9 +4,7 @@ export default {
     docs: {
       description: {
         component: `
-[Bootstrap Buttons](https://getbootstrap.com/docs/5.1/components/buttons/)
-
-Custom Buttons for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+          Snappy Button from Snappy
         `,
       },
     },
@@ -14,3 +12,5 @@ Custom Buttons for actions in forms, dialogs, and more with support for multiple
 };
 
 export { default as SnyButton } from './examples/SnyButton/SnyButton';
+export { default as Variants } from './examples/SnyButton/Variants';
+export { default as Props } from './examples/SnyButton/Props';

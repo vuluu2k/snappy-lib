@@ -1,1 +1,1 @@
-export * from './SnyButton' 
+export { default as SnyButton } from './SnyButton';

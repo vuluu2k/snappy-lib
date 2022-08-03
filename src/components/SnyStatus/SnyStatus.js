@@ -23,7 +23,7 @@ const trackingStatus = [
   { name: 'canceled', text: 'Đã hủy' },
 ];
 
-export const SnyStatus = ({ status, statusArray, status_vi, type, label, children, tooltip, badge, style, className, base }) => {
+const SnyStatus = ({ status, statusArray, status_vi, type, label, children, tooltip, badge, style, className, base }) => {
   const checkStatus = statusArray.find(item => item.array.includes(status));
 
   return (
@@ -73,3 +73,5 @@ SnyStatus.defaultProps = {
   style: {},
   className: '',
 };
+
+export default SnyStatus;

@@ -1,5 +1,7 @@
+import React from 'react';
 import { SnyButton } from 'snappy';
-
+import { colors } from '../options';
+import 'snappy/styles/common.css';
 
 function Example(args) {
   return (
@@ -8,15 +10,22 @@ function Example(args) {
     </div>
   );
 }
-
 Example.args = {
   children: 'Snappy Express',
   type: 'primary',
-  outline: false,
-  size: undefined,
-  block: false,
-  active: false,
-  close: false,
+  style: { width: 120 },
+  size:'md',
+};
+
+Example.argTypes = {
+  type: {
+    control: { type: 'select' },
+    options: colors,
+  },
+  size: {
+    control: { type: 'select' },
+    options: ['sm', 'md', 'lg'],
+  },
 };
 
 export default Example;

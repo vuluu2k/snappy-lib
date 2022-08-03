@@ -1,1 +1,1 @@
-export * from './SnyTabs' 
+export { default as SnyTabs } from './SnyTabs';

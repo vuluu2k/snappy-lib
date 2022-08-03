@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import PropTypes from 'prop-types';
 
-export const SnyTabs = ({ options, onClick, style, styleTab, className, value, arrayActive }) => {
+const SnyTabs = ({ options, onClick, style, styleTab, className, value, arrayActive }) => {
   return (
     <Row className={`sny-tabs ${className}`} style={style}>
       {options.map((item, idx) => (
@@ -42,3 +42,5 @@ SnyTabs.defaultProps = {
   value: 1,
   arrayActive: [],
 };
+
+export default SnyTabs;

@@ -1,12 +1,61 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Badge, Tooltip } from 'antd';
-import Icon, { LoadingOutlined, CommentOutlined, RetweetOutlined } from '@ant-design/icons';
-import { AiFillEdit, AiFillDelete, AiFillYoutube, AiFillAudio, AiFillCustomerService, AiFillApi, AiFillSetting, AiOutlinePlus } from 'react-icons/ai';
+import Icon, {
+  LoadingOutlined,
+  CommentOutlined,
+  RetweetOutlined,
+} from '@ant-design/icons';
+import {
+  AiFillEdit,
+  AiFillDelete,
+  AiFillYoutube,
+  AiFillAudio,
+  AiFillCustomerService,
+  AiFillApi,
+  AiFillSetting,
+  AiOutlinePlus,
+} from 'react-icons/ai';
 import { BsFillEyeFill } from 'react-icons/bs';
 import { IoImageSharp } from 'react-icons/io5';
 
-export const SnyButton = ({
+const propTypes = {
+  label: PropTypes.node,
+  type: PropTypes.string,
+  size: PropTypes.string,
+  style: PropTypes.object,
+  icon: PropTypes.node,
+  loading: PropTypes.bool,
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
+  className: PropTypes.string,
+  suffixIcon: PropTypes.node,
+  shape: PropTypes.string,
+  badge: PropTypes.object,
+  iconButton: PropTypes.bool,
+  tooltip: PropTypes.object,
+  template: PropTypes.string,
+};
+
+const defaultProps = {
+  label: 'SnappyExpress',
+  type: 'default',
+  size: 'md',
+  style: {},
+  icon: false,
+  loading: false,
+  onClick: (e) => e.isDefaultPrevented(),
+  disabled: false,
+  className: '',
+  suffixIcon: false,
+  shape: '',
+  badge: {},
+  iconButton: false,
+  tooltip: {},
+  template: '',
+};
+
+const SnyButton = ({
   label,
   type,
   size,
@@ -30,9 +79,14 @@ export const SnyButton = ({
         <Tooltip {...tooltip}>
           <Badge {...badge}>
             <div
-              onClick={(!disabled && onClick) || (e => e.isDefaultPrevented())}
-              className={`sny-button circle ${size} ${template} ${(disabled && 'disabled') || type} ${className}`}
-              style={style}>
+              onClick={
+                (!disabled && onClick) || ((e) => e.isDefaultPrevented())
+              }
+              className={`sny-button circle ${size} ${template} ${
+                (disabled && 'disabled') || type
+              } ${className}`}
+              style={style}
+            >
               {(loading && <LoadingOutlined />) ||
                 (template && (
                   <Icon
@@ -64,11 +118,16 @@ export const SnyButton = ({
       <Tooltip {...tooltip}>
         <Badge {...badge}>
           <div
-            onClick={(!disabled && onClick) || (e => e.isDefaultPrevented())}
-            className={`sny-button ${iconButton && 'icon-button'} ${(disabled && 'disabled') || type} ${size} ${className}`}
-            style={style}>
+            onClick={(!disabled && onClick) || ((e) => e.isDefaultPrevented())}
+            className={`sny-button ${iconButton && 'icon-button'} ${
+              (disabled && 'disabled') || type
+            } ${size} ${className}`}
+            style={style}
+          >
             {icon && <div>{(loading && <LoadingOutlined />) || icon}</div>}
-            {!iconButton && <div className={(icon && 'ml-8') || ''}>{children || label}</div>}
+            {!iconButton && (
+              <div className={(icon && 'ml-8') || ''}>{children || label}</div>
+            )}
             {suffixIcon && <div className="ml-8">{suffixIcon}</div>}
           </div>
         </Badge>
@@ -77,38 +136,9 @@ export const SnyButton = ({
   );
 };
 
-SnyButton.propTypes = {
-  label: PropTypes.node,
-  type: PropTypes.string,
-  size: PropTypes.string,
-  style: PropTypes.object,
-  icon: PropTypes.node,
-  loading: PropTypes.bool,
-  onClick: PropTypes.func,
-  disabled: PropTypes.bool,
-  className: PropTypes.string,
-  suffixIcon: PropTypes.node,
-  shape: PropTypes.string,
-  badge: PropTypes.object,
-  iconButton: PropTypes.bool,
-  tooltip: PropTypes.object,
-  template: PropTypes.string,
-};
+SnyButton.propTypes = propTypes;
 
-SnyButton.defaultProps = {
-  label: 'SnappyExpress',
-  type: 'default',
-  size: 'md',
-  style: {},
-  icon: false,
-  loading: false,
-  onClick: e => e.isDefaultPrevented(),
-  disabled: false,
-  className: '',
-  suffixIcon: false,
-  shape: '',
-  badge: {},
-  iconButton: false,
-  tooltip: {},
-  template: '',
-};
+SnyButton.defaultProps = defaultProps;
+
+
+export default SnyButton
