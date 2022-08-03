@@ -2,7 +2,7 @@
   "name": "snappy-lib",
   "version": "1.0.4",
   "description": "snappy library for snappy express with custom antd",
-  "type": "module",
+  "type": "commonjs",
   "source": "src/index.js",
   "exports": {
     "import": "./dist/snappy.modern.js",
@@ -15,7 +15,7 @@
   "sideEffects": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
+    "start": "start-storybook -s ./static -p 8080",
     "build-storybook": "build-storybook",
     "build:docs": "build-storybook -s ./static -o ./build",
     "build-lib": "microbundle --generateTypes false --jsx React.createElement --compress false"
