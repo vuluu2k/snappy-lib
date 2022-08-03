@@ -9,5 +9,5 @@ module.exports = {
     "@storybook/addon-interactions",
     "@storybook/addon-docs"
   ],
-  "framework": "@storybook/react"
+  "framework": "@storybook/react",
 }
