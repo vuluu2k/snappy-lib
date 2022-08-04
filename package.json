@@ -1,6 +1,6 @@
 {
   "name": "snappy-lib",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "snappy library for snappy express with custom antd",
   "type": "module",
   "source": "src/index.js",
@@ -18,6 +18,7 @@
     "cover": "npm test -- --coverage",
     "start": "start-storybook -s ./static -p 8080",
     "build:docs": "build-storybook -s ./static -o ./build",
+    "build":"microbundle --css",
     "build-lib": "microbundle --generateTypes false --jsx React.createElement --compress false",
     "prettier": "prettier --write src"
   },
