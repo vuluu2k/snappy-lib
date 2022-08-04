@@ -19,6 +19,8 @@ import {
 import { BsFillEyeFill } from 'react-icons/bs';
 import { IoImageSharp } from 'react-icons/io5';
 
+import '../../styles/test.scss';
+
 const propTypes = {
   label: PropTypes.node,
   type: PropTypes.string,

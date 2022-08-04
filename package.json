@@ -1,6 +1,6 @@
 {
   "name": "snappy-lib",
-  "version": "1.0.6",
+  "version": "1.0.10",
   "description": "snappy library for snappy express with custom antd",
   "type": "module",
   "source": "src/index.js",
@@ -12,13 +12,11 @@
   "main": "./dist/snappy.cjs",
   "module": "./dist/snappy.module.js",
   "unpkg": "./dist/snappy.umd.js",
-  "sideEffects": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cover": "npm test -- --coverage",
     "start": "start-storybook -s ./static -p 8080",
     "build:docs": "build-storybook -s ./static -o ./build",
-    "build":"microbundle --css",
     "build-lib": "microbundle --generateTypes false --jsx React.createElement --compress false",
     "prettier": "prettier --write src"
   },
@@ -35,7 +33,21 @@
     "react-snappy",
     "snappy-express",
     "snappy.vn",
-    "snappy"
+    "snappy",
+    "component",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "dist/*"
   ],
   "author": "vuluu2k <vuluu040320@gmail.com>",
   "license": "MIT",
@@ -68,10 +80,12 @@
     "antd": "^4.22.3",
     "babel-loader": "^8.2.5",
     "microbundle": "^0.15.0",
+    "node-sass": "^7.0.1",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "storybook-addon-sass-postcss": "^0.1.3"
   },
   "peerDependencies": {
     "react": "^18.2.0",

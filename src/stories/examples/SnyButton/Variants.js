@@ -1,7 +1,6 @@
 import React from 'react';
 import { SnyButton } from 'snappy';
 import { colors } from '../options';
-import 'snappy/styles/common.css';
 
 function Example(args) {
   return (

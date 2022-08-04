@@ -1,7 +1,6 @@
 import React from 'react';
 import { SnyStatus } from 'snappy';
 import { colors_status } from '../options';
-import 'snappy/styles/common.css';
 
 function Example(args) {
   return (
