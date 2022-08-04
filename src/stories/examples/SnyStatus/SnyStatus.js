@@ -9,7 +9,7 @@ function Example(args) {
       <br />
       <div>---base is profile for express---</div>
       <br />
-      <SnyStatus {...args} base/>
+      <SnyStatus {...args} base />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta, Canvas } from '@storybook/addon-docs';
 
 <Meta title="Home/Installation" />
 
@@ -10,11 +10,12 @@ import { Meta } from '@storybook/addon-docs';
 
 ### Install SnappyLib:
 
-```sh
-npm install snappy-lib react react-dom
-```
-
-snappy-lib currently requires React 16.8 or higher.
+<Canvas>
+  <div>{`npm install snappy-lib react react-dom';`}</div>
+  <div style={{ color: 'red' }}>
+    Note:snappy-lib currently requires React 16.8 or higher.
+  </div>
+</Canvas>
 
 ### Include Css
 
@@ -22,28 +23,30 @@ Either:
 
 1. Import css in your application code:
 
-```javascript
-import 'snappy-lib/dist/snappy.css';
-```
+<Canvas>
+  <div>{`import 'snappy-lib/dist/snappy.css';`}</div>
+</Canvas>
 
 2. or include Bootstrap from a CDN URL in your HTML layout:
 
-```html
-<head>
-  <link
+<Canvas>
+  <div>
+    {`<link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-  />
-</head>
-```
+  />`}
+  </div>
+</Canvas>
 
 ### Import components:
 
 ```jsx
-import React from 'react';
-import { SnyButton } from 'snappy-lib';
+<>
+  import React from 'react';
+  import { SnyButton } from 'snappy-lib';
 
-export default (props) => {
-  return <SnyButton type="danger">Danger!</SnyButton>;
-};
+  export default (props) => {
+    return <SnyButton type="danger">Danger!</SnyButton>;
+  };
+</>
 ```

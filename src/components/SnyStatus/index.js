@@ -1,1 +1,1 @@
-export {default as SnyStatus} from './SnyStatus' 
+export { default as SnyStatus } from './SnyStatus';

@@ -8,12 +8,10 @@ function Example() {
 
 export default Example;
 
-
 Example.parameters = {
   docs: {
     description: {
-      story:
-        'There are props use Tabs',
+      story: 'There are props use Tabs',
     },
   },
 };

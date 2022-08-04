@@ -23,18 +23,38 @@ const trackingStatus = [
   { name: 'canceled', text: 'Đã hủy' },
 ];
 
-const SnyStatus = ({ status, statusArray, status_vi, type, label, children, tooltip, badge, style, className, base }) => {
-  const checkStatus = statusArray.find(item => item.array.includes(status));
+const SnyStatus = ({
+  status,
+  statusArray,
+  status_vi,
+  type,
+  label,
+  children,
+  tooltip,
+  badge,
+  style,
+  className,
+  base,
+}) => {
+  const checkStatus = statusArray.find((item) => item.array.includes(status));
 
   return (
     <Tooltip {...tooltip}>
       <Badge {...badge}>
         <div
-          className={`sny-status ${base && 'base'} ${status && 'w-148'} ${base ? `base-${type}` : type} ${
-            checkStatus && (base ? `base-${checkStatus?.color}` : checkStatus?.color)
+          className={`sny-status ${base && 'base'} ${status && 'w-148'} ${
+            base ? `base-${type}` : type
+          } ${
+            checkStatus &&
+            (base ? `base-${checkStatus?.color}` : checkStatus?.color)
           } ${className}`}
-          style={style}>
-          {label || children || status_vi || trackingStatus.find(item => item.name === status)?.text || 'SnappyExpress'}
+          style={style}
+        >
+          {label ||
+            children ||
+            status_vi ||
+            trackingStatus.find((item) => item.name === status)?.text ||
+            'SnappyExpress'}
         </div>
       </Badge>
     </Tooltip>
@@ -56,11 +76,40 @@ SnyStatus.propTypes = {
 
 SnyStatus.defaultProps = {
   statusArray: [
-    { array: ['request_received', 'waiting_for_return', 'returning', 'part_delivery'], color: 'orange' },
-    { array: ['processing_picked_up', 'out_for_delivery', 'picked_up'], color: 'blue' },
-    { array: ['import_picking_warehouse', 'on_the_way', 'import_returning_warehouse', 'returned'], color: 'cyan' },
-    { array: ['picked_up_fail', 'undeliverable', 'return_fail', 'canceled'], color: 'red' },
-    { array: ['processing_on_the_way', 'on_the_way_returning', 'waiting_on_the_way'], color: 'purple' },
+    {
+      array: [
+        'request_received',
+        'waiting_for_return',
+        'returning',
+        'part_delivery',
+      ],
+      color: 'orange',
+    },
+    {
+      array: ['processing_picked_up', 'out_for_delivery', 'picked_up'],
+      color: 'blue',
+    },
+    {
+      array: [
+        'import_picking_warehouse',
+        'on_the_way',
+        'import_returning_warehouse',
+        'returned',
+      ],
+      color: 'cyan',
+    },
+    {
+      array: ['picked_up_fail', 'undeliverable', 'return_fail', 'canceled'],
+      color: 'red',
+    },
+    {
+      array: [
+        'processing_on_the_way',
+        'on_the_way_returning',
+        'waiting_on_the_way',
+      ],
+      color: 'purple',
+    },
     { array: ['delivered'], color: 'green' },
   ],
   status: undefined,

@@ -12,7 +12,7 @@ function Info({ component }) {
 }
 
 function Props({ component, components = [] }) {
-  console.log(components)
+  console.log(components);
 
   return (
     <div>

@@ -14,7 +14,7 @@ Example.args = {
   children: 'Snappy Express',
   type: 'primary',
   style: { width: 120 },
-  size:'md',
+  size: 'md',
 };
 
 Example.argTypes = {

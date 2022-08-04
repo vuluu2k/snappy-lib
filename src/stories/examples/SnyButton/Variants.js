@@ -7,7 +7,7 @@ function Example(args) {
   return (
     <>
       {colors.map((color) => (
-        <SnyButton type={color} key={color} style={{marginBottom:8}}>
+        <SnyButton type={color} key={color} style={{ marginBottom: 8 }}>
           {color}
         </SnyButton>
       ))}
@@ -20,8 +20,7 @@ export default Example;
 Example.parameters = {
   docs: {
     description: {
-      story:
-        'There are colors with type props',
+      story: 'There are colors with type props',
     },
   },
 };

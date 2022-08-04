@@ -140,5 +140,4 @@ SnyButton.propTypes = propTypes;
 
 SnyButton.defaultProps = defaultProps;
 
-
-export default SnyButton
+export default SnyButton;
