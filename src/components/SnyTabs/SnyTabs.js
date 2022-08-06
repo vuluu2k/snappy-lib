@@ -1,5 +1,4 @@
 import React from 'react';
-import { Row, Col } from 'antd';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -37,9 +36,9 @@ const SnyTabs = ({
   arrayActive,
 }) => {
   return (
-    <Row className={`sny-tabs ${className}`} style={style}>
+    <div className={`sny-tabs ${className}`} style={style}>
       {options.map((item, idx) => (
-        <Col
+        <div
           key={idx}
           onClick={() => onClick(item.value, item.label)}
           className={`tab ${
@@ -49,9 +48,9 @@ const SnyTabs = ({
           style={styleTab}
         >
           {item.label}
-        </Col>
+        </div>
       ))}
-    </Row>
+    </div>
   );
 };
 

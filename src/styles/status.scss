@@ -1,0 +1,85 @@
+body {
+  .sny-status {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 12px;
+    min-width: 84px;
+
+    &.base {
+      all: unset;
+    }
+
+    &.w-148 {
+      min-width: 148px;
+    }
+
+    &.orange {
+      $color: #ad4e00;
+      color: $color;
+      background-color: #fff7e6;
+      border: 1px solid $color;
+    }
+
+    &.base-orange {
+      color: #ad4e00;
+    }
+
+    &.red {
+      $color: #a8071a;
+      color: $color;
+      background-color: #fff1f0;
+      border: 1px solid $color;
+    }
+
+    &.base-red {
+      color: #a8071a;
+    }
+
+    &.blue {
+      $color: #1d39c4;
+      color: $color;
+      background-color: #f0f5ff;
+      border: 1px solid $color;
+    }
+
+    &.base-blue {
+      color: #1d39c4;
+    }
+
+    &.cyan {
+      $color: #006d75;
+      color: $color;
+      background-color: #e6fffb;
+      border: 1px solid $color;
+    }
+
+    &.base-cyan {
+      color: #006d75;
+    }
+
+    &.purple {
+      $color: #722ed1;
+      color: $color;
+      background-color: #f9f0ff;
+      border: 1px solid $color;
+    }
+
+    &.base-purple {
+      color: #722ed1;
+    }
+
+    &.green {
+      $color: #135200;
+      color: $color;
+      background-color: #f6ffed;
+      border: 1px solid $color;
+    }
+
+    &.base-green {
+      color: #135200;
+    }
+  }
+}

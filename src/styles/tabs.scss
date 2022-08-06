@@ -1,0 +1,38 @@
+body {
+  .sny-tabs {
+    width: 100%;
+    display: flex;
+
+    $color-key: #2a2565;
+
+    .tab {
+      flex: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 46px;
+      border-bottom: 2px solid #d9dbea;
+      color: $color-key;
+
+      .ant-space,
+      .ant-space-item {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      cursor: pointer;
+      &:hover {
+        background-color: #f0f5ff;
+      }
+    }
+
+    .tab-active {
+      background-color: #f0f5ff;
+      border-bottom: 2px solid $color-key;
+      animation: jump 0.5s ease;
+    }
+  }
+}

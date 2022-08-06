@@ -1,7 +1,6 @@
 import React from 'react';
 import { SnyButton } from 'snappy';
 import { colors } from '../options';
-
 function Example(args) {
   return (
     <div>
