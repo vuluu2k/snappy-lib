@@ -14,7 +14,7 @@ const defaultProps = {
   tag: 'div',
 };
 
-function Container(props) {
+function SnyContainer(props) {
   const { className, cssModule, fluid, tag: Tag, ...attributes } = props;
 
   let containerClass = 'container';
@@ -32,7 +32,7 @@ function Container(props) {
   return <Tag {...attributes} className={classes} />;
 }
 
-Container.propTypes = propTypes;
-Container.defaultProps = defaultProps;
+SnyContainer.propTypes = propTypes;
+SnyContainer.defaultProps = defaultProps;
 
-export default Container;
+export default SnyContainer;
