@@ -18,11 +18,15 @@
     "start": "start-storybook -s ./static -p 8080",
     "build:docs": "build-storybook -s ./static -o ./build",
     "build-lib": "microbundle --generateTypes false --jsx React.createElement --compress false",
-    "prettier": "prettier --write src"
+    "prettier": "lint-staged",
+    "prepare": "husky install"
   },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown src"
   },
   "repository": {
     "type": "git",
@@ -79,6 +83,8 @@
     "@storybook/testing-library": "^0.0.13",
     "antd": "^4.22.3",
     "babel-loader": "^8.2.5",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "microbundle": "^0.15.0",
     "node-sass": "^7.0.1",
     "prettier": "^2.7.1",

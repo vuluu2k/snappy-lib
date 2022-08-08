@@ -21,7 +21,6 @@ import { IoImageSharp } from 'react-icons/io5';
 
 import '../../styles/index.scss';
 
-
 const propTypes = {
   label: PropTypes.node,
   type: PropTypes.string,

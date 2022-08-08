@@ -1,1 +1,1 @@
-export {default as SnyContainer} from './SnyContainer'
+export { default as SnyContainer } from './SnyContainer';
