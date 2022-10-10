@@ -1,0 +1,33 @@
+body {
+  .sny-input-otp {
+    .input-otp-container {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      font-weight: 600;
+      color: $logo-snappy;
+
+      .otp-input {
+        height: 40px;
+        width: 40px;
+        border: 2px solid $logo-snappy;
+        border-radius: 4px;
+      }
+      .otp-input-focused {
+        height: 40px;
+        width: 40px;
+        border: 2px solid $logo-snappy;
+        border-radius: 4px;
+        background-color: $geek-blue-1;
+      }
+    }
+    .input-otp-hidden {
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      opacity: 0;
+    }
+  }
+}
