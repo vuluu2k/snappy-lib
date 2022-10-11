@@ -1,52 +1,45 @@
-import { Meta, Canvas } from '@storybook/addon-docs';
+import { Meta, Canvas, Story } from '@storybook/addon-docs';
 
 <Meta title="Home/Installation" />
 
 ![Reactstrap](logo.svg)
 
-### Snappy Lib is a [React](https://reactjs.org) component library for [Snappy Express](https://snappy.vn)
+<Canvas>
+  <h2>
+    Snappy Lib is a <a href="https://reactjs.org">React</a> component library
+    for <a href="https://snappy.vn)">Snappy Express</a>
+  </h2>
+</Canvas>
+
+###
 
 ## Getting Started
 
-### Install SnappyLib:
+### Install SnappyLib (Cài đặt snappyLib):
 
 <Canvas>
-  <div>{`npm install snappy-lib react react-dom';`}</div>
-  <div style={{ color: 'red' }}>
-    Note:snappy-lib currently requires React 16.8 or higher.
-  </div>
+  <>
+    <h4>1. Npm install snappy-lib react react-dom</h4>
+    <div style={{ color: 'red' }}>
+      Note:snappy-lib currently requires React 16.8 or higher.
+    </div>
+    <h4>2. Include Css (Thêm CSS vào file app.js của bạn)</h4>
+    <div>{`import 'snappy-lib/dist/snappy.css';`}</div>
+  </>
 </Canvas>
 
-### Include Css
-
-Either:
-
-1. Import css in your application code:
+### Import components (Thêm thành phần vào dự án của bạn):
 
 <Canvas>
-  <div>{`import 'snappy-lib/dist/snappy.css';`}</div>
-</Canvas>
-
-2. or include Bootstrap from a CDN URL in your HTML layout:
-
-<Canvas>
-  <div>
-    {`<link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-  />`}
-  </div>
-</Canvas>
-
-### Import components:
-
 ```jsx
-<>
-  import React from 'react';
-  import { SnyButton } from 'snappy-lib';
+  <>
+    import React from 'react';
+    import { SnyButton } from 'snappy-lib';
 
-  export default (props) => {
-    return <SnyButton type="danger">Danger!</SnyButton>;
-  };
-</>
+    export default (props) => {
+      return <SnyButton type="danger">Danger!</SnyButton>;
+    };
+
+  </>
 ```
+</Canvas>
