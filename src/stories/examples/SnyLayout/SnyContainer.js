@@ -4,20 +4,20 @@ import { SnyContainer } from 'snappy';
 function Example(props) {
   return (
     <>
-      <SnyContainer className=" border mb-4">.container</SnyContainer>
-      <SnyContainer className=" border mb-4" fluid="sm">
+      <SnyContainer className="example border mb-4">.container</SnyContainer>
+      <SnyContainer className="example border mb-4" fluid="sm">
         .container-sm
       </SnyContainer>
-      <SnyContainer className=" border mb-4" fluid="md">
+      <SnyContainer className="example border mb-4" fluid="md">
         .container-md
       </SnyContainer>
-      <SnyContainer className=" border mb-4" fluid="lg">
+      <SnyContainer className="example border mb-4" fluid="lg">
         .container-lg
       </SnyContainer>
-      <SnyContainer className=" border mb-4" fluid="xl">
+      <SnyContainer className="example border mb-4" fluid="xl">
         .container-xl
       </SnyContainer>
-      <SnyContainer className=" border mb-4" fluid>
+      <SnyContainer className="example border mb-4" fluid>
         .container-fluid
       </SnyContainer>
     </>
