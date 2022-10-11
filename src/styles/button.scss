@@ -21,6 +21,7 @@ body {
     $color-primary-hover: #096dd9;
     $color-secondary-hover: #8f90a6;
     $color-danger-hover: #cf1322;
+    transition: 0.3s;
 
     &:active {
       animation: jump 0.5s ease;

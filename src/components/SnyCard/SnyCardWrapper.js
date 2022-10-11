@@ -10,6 +10,8 @@ const propsTypes = {
   style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   titleLeft: PropTypes.node,
   titleRight: PropTypes.node,
+  icon: PropTypes.any,
+  onClickTitle: PropTypes.func,
 };
 const defaultProps = {
   titleLeft: 'SnappyExpress',
@@ -23,6 +25,8 @@ function SnyCardWrapper({
   style,
   titleLeft,
   titleRight,
+  icon,
+  onClickTitle,
 }) {
   return (
     <div
@@ -31,7 +35,14 @@ function SnyCardWrapper({
     >
       {(titleLeft || titleRight) && (
         <div className="sny-card-title">
-          <div className="sny-card-title-left">{titleLeft}</div>
+          <div
+            className={classNames('sny-card-title-left', {
+              'cursor-pointer': onClickTitle,
+            })}
+            onClick={onClickTitle}
+          >
+            <span>{icon}</span> <span className="ml-8">{titleLeft}</span>
+          </div>
           <div className="sny-card-title-right">{titleRight}</div>
         </div>
       )}
