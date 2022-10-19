@@ -1,6 +1,6 @@
 {
   "name": "snappy-lib",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "snappy library for snappy express with custom antd",
   "type": "module",
   "source": "src/index.js",
@@ -82,7 +82,6 @@
     "@storybook/mdx2-csf": "^0.0.3",
     "@storybook/react": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
-    "antd": "^4.22.3",
     "babel-loader": "^8.2.5",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",

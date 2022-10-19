@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tooltip, Badge } from 'antd';
 
 const trackingStatus = [
   { name: 'request_received', text: 'Chờ lấy hàng' },
@@ -39,25 +38,21 @@ const SnyStatus = ({
   const checkStatus = statusArray.find((item) => item.array.includes(status));
 
   return (
-    <Tooltip {...tooltip}>
-      <Badge {...badge}>
-        <div
-          className={`sny-status ${base && 'base'} ${status && 'w-148'} ${
-            base ? `base-${type}` : type
-          } ${
-            checkStatus &&
-            (base ? `base-${checkStatus?.color}` : checkStatus?.color)
-          } ${className}`}
-          style={style}
-        >
-          {label ||
-            children ||
-            status_vi ||
-            trackingStatus.find((item) => item.name === status)?.text ||
-            'SnappyExpress'}
-        </div>
-      </Badge>
-    </Tooltip>
+    <div
+      className={`sny-status ${base && 'base'} ${status && 'w-148'} ${
+        base ? `base-${type}` : type
+      } ${
+        checkStatus &&
+        (base ? `base-${checkStatus?.color}` : checkStatus?.color)
+      } ${className}`}
+      style={style}
+    >
+      {label ||
+        children ||
+        status_vi ||
+        trackingStatus.find((item) => item.name === status)?.text ||
+        'SnappyExpress'}
+    </div>
   );
 };
 

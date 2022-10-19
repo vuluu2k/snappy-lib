@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Badge, Tooltip } from 'antd';
 import Icon, {
   LoadingOutlined,
   CommentOutlined,
@@ -69,71 +68,59 @@ const SnyButton = ({
   disabled,
   className,
   suffixIcon,
-  badge,
   shape,
   iconButton,
-  tooltip,
   template,
 }) => {
   if (shape === 'circle' || template)
     return (
       <div>
-        <Tooltip {...tooltip}>
-          <Badge {...badge}>
-            <div
-              onClick={
-                (!disabled && onClick) || ((e) => e.isDefaultPrevented())
-              }
-              className={`sny-button circle ${size} ${template} ${
-                (disabled && 'disabled') || type
-              } ${className}`}
-              style={style}
-            >
-              {(loading && <LoadingOutlined />) ||
-                (template && (
-                  <Icon
-                    component={
-                      (template === 'edit' && AiFillEdit) ||
-                      (template === 'delete' && AiFillDelete) ||
-                      (template === 'view' && BsFillEyeFill) ||
-                      (template === 'message' && CommentOutlined) ||
-                      (template === 'video' && AiFillYoutube) ||
-                      (template === 'audio' && AiFillAudio) ||
-                      (template === 'image' && IoImageSharp) ||
-                      (template === 'retweet' && RetweetOutlined) ||
-                      (template === 'service' && AiFillCustomerService) ||
-                      (template === 'plus' && AiOutlinePlus) ||
-                      (template === 'api' && AiFillApi) ||
-                      (template === 'setting' && AiFillSetting)
-                    }
-                  />
-                )) ||
-                icon}
-            </div>
-          </Badge>
-        </Tooltip>
+        <div
+          onClick={(!disabled && onClick) || ((e) => e.isDefaultPrevented())}
+          className={`sny-button circle ${size} ${template} ${
+            (disabled && 'disabled') || type
+          } ${className}`}
+          style={style}
+        >
+          {(loading && <LoadingOutlined />) ||
+            (template && (
+              <Icon
+                component={
+                  (template === 'edit' && AiFillEdit) ||
+                  (template === 'delete' && AiFillDelete) ||
+                  (template === 'view' && BsFillEyeFill) ||
+                  (template === 'message' && CommentOutlined) ||
+                  (template === 'video' && AiFillYoutube) ||
+                  (template === 'audio' && AiFillAudio) ||
+                  (template === 'image' && IoImageSharp) ||
+                  (template === 'retweet' && RetweetOutlined) ||
+                  (template === 'service' && AiFillCustomerService) ||
+                  (template === 'plus' && AiOutlinePlus) ||
+                  (template === 'api' && AiFillApi) ||
+                  (template === 'setting' && AiFillSetting)
+                }
+              />
+            )) ||
+            icon}
+        </div>
       </div>
     );
 
   return (
     <div>
-      <Tooltip {...tooltip}>
-        <Badge {...badge}>
-          <div
-            onClick={(!disabled && onClick) || ((e) => e.isDefaultPrevented())}
-            className={`sny-button ${iconButton && 'icon-button'} ${
-              (disabled && 'disabled') || type
-            } ${size} ${className}`}
-            style={style}
-          >
-            {icon && <div>{(loading && <LoadingOutlined />) || icon}</div>}
-            {!iconButton && (
-              <div className={(icon && 'ml-8') || ''}>{children || label}</div>
-            )}
-            {suffixIcon && <div className="ml-8">{suffixIcon}</div>}
-          </div>
-        </Badge>
-      </Tooltip>
+      <div
+        onClick={(!disabled && onClick) || ((e) => e.isDefaultPrevented())}
+        className={`sny-button ${iconButton && 'icon-button'} ${
+          (disabled && 'disabled') || type
+        } ${size} ${className}`}
+        style={style}
+      >
+        {icon && <div>{(loading && <LoadingOutlined />) || icon}</div>}
+        {!iconButton && (
+          <div className={(icon && 'ml-8') || ''}>{children || label}</div>
+        )}
+        {suffixIcon && <div className="ml-8">{suffixIcon}</div>}
+      </div>
     </div>
   );
 };
