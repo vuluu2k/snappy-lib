@@ -1,6 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+
+const { useState, useRef, useEffect } = React;
 
 const propTypes = {
   autoFocus: PropTypes.bool,
