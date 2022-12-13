@@ -115,7 +115,9 @@ const SnyButton = ({
         } ${size} ${className}`}
         style={style}
       >
-        {icon && <div>{(loading && <LoadingOutlined />) || icon}</div>}
+        {(icon || loading) && (
+          <div>{(loading && <LoadingOutlined />) || icon}</div>
+        )}
         {!iconButton && (
           <div className={(icon && 'ml-8') || ''}>{children || label}</div>
         )}
