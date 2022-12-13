@@ -1,6 +1,6 @@
 {
   "name": "snappy-lib",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "snappy library for snappy express with custom antd",
   "type": "module",
   "source": "src/index.js",
