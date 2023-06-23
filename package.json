@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LuuCongQuangVu/snappy-lib.git"
+    "url": "git+https://github.com/vuluu2k/snappy-lib.git"
   },
   "keywords": [
     "snappy-lib",
@@ -59,12 +59,12 @@
   "author": "vuluu2k <vuluu040320@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LuuCongQuangVu/snappy-lib/issues"
+    "url": "https://github.com/vuluu2k/snappy-lib/issues"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "homepage": "https://luucongquangvu.github.io/snappy-lib",
+  "homepage": "https://vuluu2k.github.io/snappy-lib",
   "devDependencies": {
     "@ant-design/icons": "^4.7.0",
     "@babel/core": "^7.18.10",
