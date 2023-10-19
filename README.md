@@ -8,6 +8,8 @@
 
 <a href="https://github.com/LuuCongQuangVu">author: vuluu2k</a>
 
+You are visiting [docs](https://vuluu2k.github.io/snappy-lib/) now! 
+
 ## 📦 Install
 
 ```bash
